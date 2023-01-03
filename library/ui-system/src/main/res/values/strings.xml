@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="location_text">Ubicación</string>
+    <string name="member_sice_text">Miembro desde hace</string>
+    <string name="name_holder">%s %s</string>
+    <string name="since_holder">%s años</string>
+    <string name="personal_text">Personales</string>
+    <string name="hash_symbol">/</string>
+    <string name="contact_text">Contacto</string>
+</resources>

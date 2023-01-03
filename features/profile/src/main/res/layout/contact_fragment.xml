@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <com.boreal.commonutils.component.roundablelayout.CURoundableLayout
+            android:id="@+id/btn_back"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="22dp"
+            android:clickable="true"
+            android:elevation="10dp"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:cu_backgroundColor="@color/white"
+            app:cu_cornerLeftBottom="10dp"
+            app:cu_cornerLeftTop="10dp"
+            app:cu_cornerRightSide="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_left_arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </com.boreal.commonutils.component.roundablelayout.CURoundableLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="31dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/black_700"
+            android:textSize="15sp"
+            android:translationZ="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Contacto" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_back">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/txt_names"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="54dp"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:maxLength="16"
+                        android:text="Datos"
+                        android:textColor="@color/black_700"
+                        android:textSize="35sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txt_an"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="De"
+                        android:textColor="@color/gray_800"
+                        android:textSize="30sp"
+                        app:layout_constraintStart_toStartOf="@+id/txt_names"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_names" />
+
+                    <TextView
+                        android:id="@+id/tv_lastname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="Contacto"
+                        android:textColor="@color/gray_800"
+                        android:textSize="30sp"
+                        app:layout_constraintStart_toStartOf="@+id/txt_an"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_an" />
+
+                    <TextView
+                        android:id="@+id/lbl_home_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Telefono de casa"
+                        android:textColor="@color/black_700"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_lastname"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_lastname"
+                        tools:ignore="SmallSp" />
+
+                    <com.boreal.commonutils.component.roundablelayout.CURoundableLayout
+                        android:id="@+id/roundable_home_number"
+                        android:layout_width="0dp"
+                        android:layout_height="57dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="52dp"
+                        android:padding="10dp"
+                        app:cu_cornerAll="5dp"
+                        app:cu_strokeLineColor="@color/blue_edittext"
+                        app:cu_strokeLineWidth="1dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/lbl_home_number"
+                        app:layout_constraintTop_toBottomOf="@+id/lbl_home_number">
+
+                        <TextView
+                            android:id="@+id/tv_home_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:maxLength="50"
+                            android:padding="10dp"
+                            android:textColor="@color/gray_750"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="28 58 848" />
+
+                    </com.boreal.commonutils.component.roundablelayout.CURoundableLayout>
+
+                    <TextView
+                        android:id="@+id/lbl_cell_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="35dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Telefono celular"
+                        android:textColor="@color/black_700"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toStartOf="@+id/lbl_home_number"
+                        app:layout_constraintTop_toBottomOf="@+id/roundable_home_number"
+                        tools:ignore="SmallSp" />
+
+
+                    <com.boreal.commonutils.component.roundablelayout.CURoundableLayout
+                        android:id="@+id/roundable_cell_number"
+                        android:layout_width="0dp"
+                        android:layout_height="57dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="52dp"
+                        android:padding="10dp"
+                        app:cu_cornerAll="5dp"
+                        app:cu_strokeLineColor="@color/blue_edittext"
+                        app:cu_strokeLineWidth="1dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/lbl_home_number"
+                        app:layout_constraintTop_toBottomOf="@+id/lbl_cell_number">
+
+                        <TextView
+                            android:id="@+id/tv_cell_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:maxLength="20"
+                            android:padding="10dp"
+                            android:textColor="@color/gray_750"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="322 156 1562" />
+
+                    </com.boreal.commonutils.component.roundablelayout.CURoundableLayout>
+
+                    <TextView
+                        android:id="@+id/lbl_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="35dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="@string/location_text"
+                        android:textColor="@color/black_700"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_lastname"
+                        app:layout_constraintTop_toBottomOf="@+id/roundable_cell_number"
+                        tools:ignore="SmallSp" />
+
+                    <com.boreal.commonutils.component.roundablelayout.CURoundableLayout
+                        android:id="@+id/roundable_location"
+                        android:layout_width="0dp"
+                        android:layout_height="57dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="13dp"
+                        android:padding="10dp"
+                        app:cu_cornerAll="5dp"
+                        app:cu_strokeLineColor="@color/blue_edittext"
+                        app:cu_strokeLineWidth="1dp"
+                        app:layout_constraintEnd_toStartOf="@+id/roundable_open_map"
+                        app:layout_constraintStart_toStartOf="@+id/lbl_location"
+                        app:layout_constraintTop_toBottomOf="@+id/lbl_location">
+
+                        <TextView
+                            android:id="@+id/tv_location"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:ellipsize="marquee"
+                            android:focusable="false"
+                            android:gravity="center|start"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:paddingHorizontal="10dp"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:textColor="@color/black_700"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="Calle Miramar #1195, Col..." />
+
+                    </com.boreal.commonutils.component.roundablelayout.CURoundableLayout>
+
+                    <com.boreal.commonutils.component.roundablelayout.CURoundableLayout
+                        android:id="@+id/roundable_open_map"
+                        android:layout_width="51dp"
+                        android:layout_height="57dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="55dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cu_backgroundColor="@color/blue_pin_location"
+                        app:cu_cornerAll="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lbl_location">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_location_pin"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </com.boreal.commonutils.component.roundablelayout.CURoundableLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

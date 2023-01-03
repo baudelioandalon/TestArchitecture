@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr format="string" name="label"/>
+    <bool name="blur_dialog_has_bottom_navigation_bar">true</bool>
+    <color name="bgLoader">#23F6F6F6</color>
+    <color name="black">#000000</color>
+    <color name="blue">#072553</color>
+    <color name="color_button_aceptar">#006341</color>
+    <color name="color_button_cancelar">#A2C541</color>
+    <color name="color_message_generic">#7C7C7C</color>
+    <color name="color_message_generic_warning">#363636</color>
+    <color name="grayLight">#F5F5F5</color>
+    <color name="grayOxford">#363636</color>
+    <color name="greenStrong">#0C6D48</color>
+    <color name="primaryColor">#FAFAFA</color>
+    <color name="primaryDarkColor">#C7C7C7</color>
+    <color name="primaryLightColor">#ffffff</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="redError">#AF272F</color>
+    <color name="secondaryColor">#80C913</color>
+    <color name="secondaryDarkColor">#6F9401</color>
+    <color name="secondaryLightColor">#D5F872</color>
+    <color name="secondaryTextColor">#000000</color>
+    <color name="title_dialog">#80C913</color>
+    <color name="white">#FFFFFF</color>
+    <dimen name="margin_12">12dp</dimen>
+    <dimen name="margin_14">14dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_24">24dp</dimen>
+    <dimen name="margin_4">4dp</dimen>
+    <dimen name="margin_48">48dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="padding_12">12dp</dimen>
+    <dimen name="padding_14">14dp</dimen>
+    <dimen name="padding_16">16dp</dimen>
+    <dimen name="padding_18">18dp</dimen>
+    <dimen name="padding_20">20dp</dimen>
+    <dimen name="padding_4">4dp</dimen>
+    <dimen name="padding_8">8dp</dimen>
+    <dimen name="radius_12">12dp</dimen>
+    <dimen name="radius_16">16dp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="text_size_22">22sp</dimen>
+    <dimen name="text_size_24">24sp</dimen>
+    <dimen name="text_size_26">26sp</dimen>
+    <dimen name="text_size_50">50sp</dimen>
+    <integer name="blur_dialog_animation_duration">300</integer>
+    <string name="_0">0</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="c_digo_de_confirmaci_n">Código de confirmación</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="cargando">Cargando...</string>
+    <string name="cash_simbol">$</string>
+    <string name="coinid">Código de confirmación caducado</string>
+    <string name="continuar">Continuar</string>
+    <string name="countdown_in_zero">0:00</string>
+    <string name="ingresa_el_c_digo_de_confirmaci_n">Ingresa el código de confirmación</string>
+    <string name="message_codephone">que te enviamos vía sms a tu celular</string>
+    <string name="que_te_enviamos_v_a_correo">que te enviamos vía correo</string>
+    <string name="renviar_c_digo">Renviar código</string>
+    <string name="validation_cardExpiryDate"><b>Ingrese</b> la fecha de vencimiNIento de su tarjeta</string>
+    <string name="validation_cardNumber"><b>Ingrese</b> Los 16 digitos de su tarjeta</string>
+    <string name="validation_card_nip"><b>Ingrese</b> un NIP correcto</string>
+    <string name="validation_email"><b>Ingrese</b> un correo válido</string>
+    <string name="validation_min_number">Mínimo</string>
+    <string name="validation_required">El campo es requerido</string>
+    <style name="AnimationPopUpWindowScaleInOut">
+        <item name="android:windowEnterAnimation">@anim/scale_in</item>
+        <item name="android:windowExitAnimation">@anim/scale_out</item>
+    </style>
+    <style name="BlurDialogFragment.Default.Animation" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/default_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/default_dialog_out</item>
+    </style>
+    <style name="ButtonNormalFilled" parent="Widget.MaterialComponents.Button">
+        <item name="textAllCaps">false</item>
+        <item name="background">@drawable/shape_filled_normal</item>
+        <item name="android:fontFamily">@font/helvetica_bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="backgroundTint">@color/color_state_list</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="ButtonNormalFilledOcr" parent="Widget.MaterialComponents.Button">
+        <item name="textAllCaps">false</item>
+        <item name="background">@drawable/shape_filled_normal</item>
+        <item name="android:fontFamily">@font/helvetica_bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="backgroundTint">@color/color_state_list</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="FullScreenDialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:background">#41000000</item>
+    </style>
+    <declare-styleable name="CUNumberAmount">
+
+        <attr format="boolean" name="na_behavior"/>
+        <attr format="boolean" name="na_isEnabled"/>
+        <attr format="color" name="na_complete_color"/>
+        <attr format="integer" name="na_complete_size"/>
+        <attr format="color" name="na_cash_simbol_color"/>
+        <attr format="integer" name="na_cash_simbol_size"/>
+        <attr name="na_cash_simbol_gravity">
+            <flag name="top" value="1"/>
+            <flag name="center" value="2"/>
+            <flag name="bottom" value="3"/>
+        </attr>
+        <attr format="color" name="na_integer_color"/>
+        <attr format="integer" name="na_integer_size"/>
+        <attr format="integer|reference" name="na_max_length"/>
+
+    </declare-styleable>
+    <declare-styleable name="CURoundableLayout">
+        <attr format="dimension" name="cu_cornerLeftTop"/>
+        <attr format="dimension" name="cu_cornerRightTop"/>
+        <attr format="dimension" name="cu_cornerLeftBottom"/>
+        <attr format="dimension" name="cu_cornerRightBottom"/>
+        <attr format="color" name="cu_backgroundColor"/>
+        <attr format="dimension" name="cu_strokeLineWidth"/>
+        <attr format="color" name="cu_strokeLineColor"/>
+        <attr format="dimension" name="cu_dashLineWidth"/>
+        <attr format="dimension" name="cu_dashLineGap"/>
+
+        <attr format="dimension" name="cu_cornerLeftSide"/>
+        <attr format="dimension" name="cu_cornerRightSide"/>
+
+        <attr format="dimension" name="cu_cornerAll"/>
+    </declare-styleable>
+    <declare-styleable name="CUShadowLayout">
+        <attr format="boolean" name="sl_shadowed"/>
+        <attr format="dimension" name="sl_shadow_distance"/>
+        <attr format="integer" name="sl_shadow_angle"/>
+        <attr format="dimension" name="sl_shadow_radius"/>
+        <attr format="color" name="sl_shadow_color"/>
+    </declare-styleable>
+    <declare-styleable name="flowBottomNavigation">
+        <attr format="color" name="cu_defaultIconColor"/>
+        <attr format="color" name="cu_selectedIconColor"/>
+        <attr format="color" name="cu_backgroundBottomColor"/>
+        <attr format="color" name="cu_circleColor"/>
+        <attr format="color" name="cu_countTextColor"/>
+        <attr format="color" name="cu_countBackgroundColor"/>
+        <attr format="string" name="cu_countTypeface"/>
+        <attr format="color" name="cu_rippleColor"/>
+        <attr format="color" name="cu_shadowColor"/>
+        <attr format="boolean" name="cu_hasAnimation"/>
+        <attr format="integer" name="cu_heightCell"/>
+    </declare-styleable>
+</resources>

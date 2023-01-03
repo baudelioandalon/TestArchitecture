@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="userProfile"
+            type="java.lang.String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <com.boreal.commonutils.component.roundablelayout.CURoundableLayout
+            android:id="@+id/btn_back"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="22dp"
+            android:clickable="true"
+            android:elevation="10dp"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:cu_backgroundColor="@color/white"
+            app:cu_cornerLeftBottom="10dp"
+            app:cu_cornerLeftTop="10dp"
+            app:cu_cornerRightSide="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_left_arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </com.boreal.commonutils.component.roundablelayout.CURoundableLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="31dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/black_700"
+            android:textSize="15sp"
+            android:translationZ="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Perfil" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_back">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_back">
+
+                <com.jackandphantom.circularprogressbar.CircleProgressbar
+                    android:id="@+id/img_photo"
+                    android:layout_width="@dimen/width_img_user"
+                    android:layout_height="@dimen/width_img_user"
+                    android:layout_marginStart="51dp"
+                    android:layout_marginTop="46dp"
+                    app:cpb_backgroundProgressColor="@color/gray_300"
+                    app:cpb_foregroundProgressColor="@color/primary_700"
+                    app:cpb_foregroundProgressWidth="20"
+                    app:cpb_roundedCorner="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.boreal.commonutils.component.roundablelayout.CURoundableLayout
+                    android:id="@+id/add_image"
+                    android:layout_width="@dimen/width_img_roundable"
+                    android:layout_height="@dimen/width_img_roundable"
+                    android:backgroundTint="@color/white"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:visibility="visible"
+                    app:cu_cornerAll="@dimen/corners_img_add"
+                    app:layout_constraintBottom_toBottomOf="@+id/img_photo"
+                    app:layout_constraintEnd_toEndOf="@+id/img_photo"
+                    app:layout_constraintStart_toStartOf="@+id/img_photo"
+                    app:layout_constraintTop_toTopOf="@+id/img_photo">
+
+
+                    <ImageView
+                        android:id="@+id/img_iser_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:loadUserImage="@{userProfile}"
+                        tools:src="@drawable/ic_user_example" />
+
+                </com.boreal.commonutils.component.roundablelayout.CURoundableLayout>
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="47dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/a_line_vertical"
+                    app:layout_constraintStart_toEndOf="@+id/img_photo"
+                    app:layout_constraintTop_toTopOf="@+id/img_photo" />
+
+                <LinearLayout
+                    android:id="@+id/btnBirthDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="77dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView3"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_thin"
+                        tools:text="00"
+                        android:textColor="@color/gray_800"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:fontFamily="@font/montserrat_thin"
+                        android:text="@string/hash_symbol"
+                        android:textColor="@color/gray_800"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_thin"
+                        tools:text="00"
+                        android:textColor="@color/gray_800"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:fontFamily="@font/montserrat_thin"
+                        android:text="@string/hash_symbol"
+                        android:textColor="@color/gray_800"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_thin"
+                        tools:text="00"
+                        android:textColor="@color/gray_800"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView3"
+                    app:layout_constraintTop_toBottomOf="@+id/btnBirthDay">
+
+                    <ImageView
+                        android:id="@+id/btnWoman"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:contentDescription="@string/aceptar"
+                        android:src="@drawable/ic_woman" />
+
+                    <ImageView
+                        android:id="@+id/btnMan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/aceptar"
+                        android:src="@drawable/ic_man" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_names"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="51dp"
+                    android:layout_marginTop="28dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    tools:text="Steff"
+                    android:textColor="@color/black_700"
+                    android:textSize="35sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_photo" />
+
+                <TextView
+                    android:id="@+id/tv_lastname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semibold"
+                    tools:text="Andalon"
+                    android:textColor="@color/gray_800"
+                    android:textSize="30sp"
+                    app:layout_constraintStart_toStartOf="@+id/img_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_names" />
+
+                <TextView
+                    android:id="@+id/txt_title_member_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="@string/member_sice_text"
+                    android:textColor="@color/black_700"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="@+id/tv_lastname"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_lastname" />
+
+                <TextView
+                    android:id="@+id/txt_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semibold"
+                    tools:text="MX"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black_700"
+                    android:textSize="25sp"
+                    app:layout_constraintEnd_toEndOf="@+id/btn_contact"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/txt_title_member_from"
+                    app:layout_constraintTop_toTopOf="@+id/txt_title_member_from" />
+
+                <TextView
+                    android:id="@+id/tv_member_since"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textColor="@color/gray_800"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="@+id/txt_title_member_from"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_title_member_from"
+                    tools:text="20 años" />
+
+                <ImageView
+                    android:id="@+id/imgPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/aceptar"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/ic_phone_add_user"
+                    app:layout_constraintStart_toStartOf="@+id/tv_lastname"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_member_since" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="17dp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="@string/contact_text"
+                    android:textColor="@color/black_700"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toEndOf="@+id/imgPhone"
+                    app:layout_constraintTop_toTopOf="@+id/imgPhone" />
+
+
+                <com.boreal.commonutils.component.roundablelayout.CURoundableLayout
+                    android:id="@+id/btn_contact"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    app:cu_backgroundColor="@color/gray_element_add_user"
+                    app:cu_cornerAll="10dp"
+                    app:layout_constraintStart_toStartOf="@+id/btn_personal"
+                    app:layout_constraintTop_toTopOf="@+id/imgPhone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:rotation="270"
+                        android:src="@drawable/ic_down_black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </com.boreal.commonutils.component.roundablelayout.CURoundableLayout>
+
+                <ImageView
+                    android:id="@+id/imgUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:src="@drawable/ic_user_register"
+                    app:layout_constraintStart_toStartOf="@+id/imgPhone"
+                    app:layout_constraintTop_toBottomOf="@+id/imgPhone" />
+
+                <TextView
+                    android:id="@+id/txtPersonal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="17dp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="@string/personal_text"
+                    android:textColor="@color/black_700"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toEndOf="@+id/imgUser"
+                    app:layout_constraintTop_toTopOf="@+id/imgUser" />
+
+                <com.boreal.commonutils.component.roundablelayout.CURoundableLayout
+                    android:id="@+id/btn_personal"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="53dp"
+                    app:cu_backgroundColor="@color/gray_element_add_user"
+                    app:cu_cornerAll="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/txtPersonal"
+                    app:layout_constraintTop_toTopOf="@+id/imgUser">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:rotation="270"
+                        android:src="@drawable/ic_down_black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </com.boreal.commonutils.component.roundablelayout.CURoundableLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

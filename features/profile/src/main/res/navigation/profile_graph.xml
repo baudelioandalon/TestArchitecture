@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_graph"
+    app:startDestination="@id/profileFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.boreal.allen.profile.ui.profile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/profile_fragment">
+        <argument
+            android:name="profileData"
+            app:argType="com.boreal.allen.core.domain.entity.profile.ProfileArguments"
+            app:nullable="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/personalFragment"
+        android:name="com.boreal.allen.profile.ui.personal.PersonalFragment"
+        android:label="PersonalFragment"
+        tools:layout="@layout/personal_fragment" />
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.boreal.allen.profile.ui.contact.ContactFragment"
+        android:label="ContactFragment"
+        tools:layout="@layout/contact_fragment" />
+
+</navigation>

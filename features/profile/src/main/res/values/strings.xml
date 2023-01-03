@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="email_text">Correo</string>
+    <string name="age_text">Edad</string>
+    <string name="nss_text">SSN</string>
+</resources>

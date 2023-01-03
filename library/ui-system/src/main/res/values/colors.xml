@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black_700">#112633</color>
+    <color name="primary_700">#657BDF</color>
+    <color name="gray_element_add_user">#F4F4FA</color>
+    <color name="blue_pin_location">#2196F3</color>
+    <color name="blue_edittext">#A9B7EE</color>
+
+    <color name="gray_100">#FCFCFE</color>
+    <color name="gray_200">#F7F4FC</color>
+    <color name="gray_300">#F1EDF9</color>
+    <color name="gray_400">#ECE6F7</color>
+    <color name="gray_500">#E6DFF4</color>
+    <color name="gray_600">#E1D8F3</color>
+    <color name="gray_700">#DACFEF</color>
+    <color name="gray_750">#ADAEB3</color>
+    <color name="gray_800">#70727B</color>
+
+    <color name="blue_purple_100">#F7F5FF</color>
+    <color name="blue_purple_200">#E4DAFF</color>
+    <color name="blue_purple_300">#CCB9FF</color>
+    <color name="blue_purple_400">#B59AFF</color>
+    <color name="blue_purple_500">#A483FF</color>
+    <color name="blue_purple_600">#895FFF</color>
+    <color name="blue_purple_700">#6E39FF</color>
+</resources>

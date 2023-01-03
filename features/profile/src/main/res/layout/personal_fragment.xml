@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+
+        <com.boreal.commonutils.component.roundablelayout.CURoundableLayout
+            android:id="@+id/btn_back"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="22dp"
+            android:clickable="true"
+            android:elevation="10dp"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:cu_backgroundColor="@color/white"
+            app:cu_cornerLeftBottom="10dp"
+            app:cu_cornerLeftTop="10dp"
+            app:cu_cornerRightSide="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_left_arrow"
+                android:contentDescription="@string/aceptar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </com.boreal.commonutils.component.roundablelayout.CURoundableLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="31dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/black_700"
+            android:textSize="15sp"
+            android:translationZ="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Personales" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_back">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/tv_names"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="54dp"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:maxLength="16"
+                        tools:text="Nombre"
+                        android:textColor="@color/black_700"
+                        android:textSize="35sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_lastname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semibold"
+                        tools:text="Apellido"
+                        android:textColor="@color/gray_800"
+                        android:textSize="30sp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_names"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_names" />
+
+                    <TextView
+                        android:id="@+id/lbl_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="@string/email_text"
+                        android:textColor="@color/black_700"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_lastname"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_lastname"
+                        tools:ignore="SmallSp" />
+
+                    <com.boreal.commonutils.component.roundablelayout.CURoundableLayout
+                        android:id="@+id/roundable_email"
+                        android:layout_width="0dp"
+                        android:layout_height="57dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="52dp"
+                        android:padding="10dp"
+                        app:cu_cornerAll="5dp"
+                        app:cu_strokeLineColor="@color/blue_edittext"
+                        app:cu_strokeLineWidth="1dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/lbl_email"
+                        app:layout_constraintTop_toBottomOf="@+id/lbl_email">
+
+                        <TextView
+                            android:id="@+id/tv_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:maxLength="50"
+                            android:padding="10dp"
+                            android:textColor="@color/gray_750"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="example@gmail.com" />
+
+                    </com.boreal.commonutils.component.roundablelayout.CURoundableLayout>
+
+                    <TextView
+                        android:id="@+id/lbl_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="35dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="@string/age_text"
+                        android:textColor="@color/black_700"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toStartOf="@+id/lbl_email"
+                        app:layout_constraintTop_toBottomOf="@+id/roundable_email"
+                        tools:ignore="SmallSp" />
+
+
+                    <com.boreal.commonutils.component.roundablelayout.CURoundableLayout
+                        android:id="@+id/roundable_age"
+                        android:layout_width="0dp"
+                        android:layout_height="57dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="52dp"
+                        android:padding="10dp"
+                        app:cu_cornerAll="5dp"
+                        app:cu_strokeLineColor="@color/blue_edittext"
+                        app:cu_strokeLineWidth="1dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/lbl_email"
+                        app:layout_constraintTop_toBottomOf="@+id/lbl_age">
+
+                        <TextView
+                            android:id="@+id/tv_age"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:maxLength="20"
+                            android:padding="10dp"
+                            android:textColor="@color/gray_750"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="34 años" />
+
+                    </com.boreal.commonutils.component.roundablelayout.CURoundableLayout>
+
+                    <TextView
+                        android:id="@+id/lbl_nss"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="35dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="@string/nss_text"
+                        android:textColor="@color/black_700"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toStartOf="@+id/lbl_age"
+                        app:layout_constraintTop_toBottomOf="@+id/roundable_age"
+                        tools:ignore="SmallSp" />
+
+
+                    <com.boreal.commonutils.component.roundablelayout.CURoundableLayout
+                        android:id="@+id/roundable_nss"
+                        android:layout_width="0dp"
+                        android:layout_height="57dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="52dp"
+                        android:padding="10dp"
+                        app:cu_cornerAll="5dp"
+                        app:cu_strokeLineColor="@color/blue_edittext"
+                        app:cu_strokeLineWidth="1dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/lbl_email"
+                        app:layout_constraintTop_toBottomOf="@+id/lbl_nss">
+
+                        <TextView
+                            android:id="@+id/tv_nss"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:maxLength="20"
+                            android:padding="10dp"
+                            android:textColor="@color/gray_750"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="33 15 151 41" />
+
+                    </com.boreal.commonutils.component.roundablelayout.CURoundableLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
